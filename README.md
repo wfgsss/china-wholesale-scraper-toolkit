@@ -201,6 +201,15 @@ APIFY_TOKEN=your_token node examples/export-comparison-csv.js "wireless earbuds"
 # → comparison-wireless-earbuds.csv
 ```
 
+### Supplier Ranking
+
+The [`supplier-ranking.js`](examples/supplier-ranking.js) script ranks suppliers by a composite score based on price competitiveness (0-40 pts), product variety (0-30 pts), and trust signals (0-30 pts). Helps identify the best suppliers across all three platforms.
+
+```bash
+APIFY_TOKEN=your_token node examples/supplier-ranking.js "bluetooth speaker"
+# → supplier-ranking-bluetooth-speaker.json
+```
+
 ### Sample Output
 
 ```

@@ -169,16 +169,39 @@ Platform-specific fields:
 
 ## 💡 Examples
 
-### Cross-Platform Price Comparison
-
-The [`examples/cross-platform-price-comparison.js`](examples/cross-platform-price-comparison.js) script runs all three scrapers for the same keyword, merges results, and prints a sorted comparison table with per-platform stats.
+All example scripts live in [`examples/`](examples/). Install dependencies first:
 
 ```bash
-npm install apify-client
+cd examples && npm install
+```
+
+### Cross-Platform Price Comparison (Node.js)
+
+The [`cross-platform-price-comparison.js`](examples/cross-platform-price-comparison.js) script runs all three scrapers for the same keyword, merges results, and prints a sorted comparison table with per-platform stats. Exports results to JSON.
+
+```bash
 APIFY_TOKEN=your_token node examples/cross-platform-price-comparison.js "bluetooth speaker"
 ```
 
-Sample output:
+### Cross-Platform Price Comparison (Python)
+
+Same functionality in Python with CSV + JSON export:
+
+```bash
+pip install apify-client
+APIFY_TOKEN=your_token python3 examples/cross-platform-price-comparison.py "bluetooth speaker"
+```
+
+### Export to CSV
+
+The [`export-comparison-csv.js`](examples/export-comparison-csv.js) script runs all three scrapers and exports a clean CSV with normalized USD prices — ready for Excel/Google Sheets analysis.
+
+```bash
+APIFY_TOKEN=your_token node examples/export-comparison-csv.js "wireless earbuds"
+# → comparison-wireless-earbuds.csv
+```
+
+### Sample Output
 
 ```
 📊 Price Comparison: "bluetooth speaker" (87 products)

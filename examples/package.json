@@ -1,0 +1,13 @@
+{
+  "name": "china-wholesale-scraper-examples",
+  "version": "1.0.0",
+  "description": "Example scripts for China Wholesale Scraper Toolkit",
+  "scripts": {
+    "compare": "node cross-platform-price-comparison.js",
+    "compare:csv": "node export-comparison-csv.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.9.0"
+  },
+  "license": "MIT"
+}

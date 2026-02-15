@@ -167,6 +167,35 @@ Platform-specific fields:
 - [How to Build a China Wholesale Price Tracker](https://dev.to/wfgsss/how-to-build-a-china-wholesale-price-tracker-with-dhgate-and-yiwugo-data-1dea)
 - [How to Use Yiwugo Data to Find Trending Products](https://dev.to/wfgsss/how-to-use-yiwugo-data-to-find-trending-products-before-they-go-viral-78h)
 
+## 💡 Examples
+
+### Cross-Platform Price Comparison
+
+The [`examples/cross-platform-price-comparison.js`](examples/cross-platform-price-comparison.js) script runs all three scrapers for the same keyword, merges results, and prints a sorted comparison table with per-platform stats.
+
+```bash
+npm install apify-client
+APIFY_TOKEN=your_token node examples/cross-platform-price-comparison.js "bluetooth speaker"
+```
+
+Sample output:
+
+```
+📊 Price Comparison: "bluetooth speaker" (87 products)
+
+Platform       | Product                                  | Price              | MOQ          | Supplier
+---------------+------------------------------------------+--------------------+--------------+----------------------------
+Yiwugo         | Mini Portable Bluetooth Speaker 10W       | ¥18.50             | 100 Pieces   | Yiwu Soundwave Electronics
+DHgate         | Wireless Bluetooth Speaker Waterproof     | US$8.99-12.50      | 1 Piece      | Shenzhen Audio Store
+Made-in-China  | 20W Bluetooth Speaker OEM Factory         | US$6.80-9.50       | 500 Pieces   | Dongguan Smart Audio Co.
+
+📈 Summary by Platform:
+
+  Yiwugo: 30 products | Price range: $2.59 – $18.90 | Avg: $7.42
+  DHgate: 32 products | Price range: $3.99 – $45.00 | Avg: $14.28
+  Made-in-China: 25 products | Price range: $1.20 – $22.00 | Avg: $8.15
+```
+
 ## 🤝 Contributing
 
 Found a bug or have a feature request? Open an issue in the relevant repository:
